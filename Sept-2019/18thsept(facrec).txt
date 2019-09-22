@@ -1,0 +1,17 @@
+#include<stdio.h>
+int fact(int n);
+int main()
+{
+long int n,p;
+scanf("%ld",&n);
+p=fact(n);
+printf("%ld",p);
+}
+int fact(int n)
+{
+while(n!=1)
+{
+return n*fact(n-1);
+}
+}
+

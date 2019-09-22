@@ -1,0 +1,29 @@
+/*Given an unsorted integer array,find the first missing positive integer*/
+#include<stdio.h>
+void main()
+{
+int n,i,A;
+printf("enter no of elements:");
+scanf("%d",&n);
+int a[n],a1[n];
+printf("\nenter elements into array");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+for(i=0;i<n;i++)
+{
+if(a[i]<=0 || a[i]>=n)
+continue;
+a1[a[i]]=a[i];
+}
+for(i=1;i<=n;i++)
+{
+if(a1[i]!=i)
+{
+A=i;
+break;
+}
+}
+printf("\n first missing element is %d:",A);
+}

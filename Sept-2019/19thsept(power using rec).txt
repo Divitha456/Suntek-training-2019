@@ -1,0 +1,16 @@
+#include<stdio.h>
+int power(int x,int n);
+int main()
+{
+long int x,n,p;
+scanf("%ld%ld",&x,&n);
+p=power(x,n);
+printf("%ld",p);
+}
+int power(int x,int n)
+{
+if(n!=0)
+ return (x*power(x,n-1));
+else
+ return 1;
+}

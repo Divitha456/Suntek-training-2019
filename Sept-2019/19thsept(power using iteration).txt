@@ -1,0 +1,19 @@
+#include<stdio.h>
+int power(int x,int n);
+int main()
+{
+int p,x,n;
+printf("enter x and n values:");
+scanf("%d%d",&x,&n);
+p=power(x,n);
+printf("value is %d",p);
+}
+int power(int x,int n)
+{
+int c=1;
+for(int i=1;i<=n;i++)
+{
+c=c*x;
+return c;
+}
+}
